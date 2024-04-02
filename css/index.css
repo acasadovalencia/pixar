@@ -1,0 +1,318 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/josefin-sans-v32-latin-300.woff2') format('woff2');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/josefin-sans-v32-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/josefin-sans-v32-latin-500.woff2') format('woff2');
+  }
+@font-face {
+    font-display: swap;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-v26-latin-regular.woff2') format('woff2');
+  }
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+    display: block;
+}
+p a{
+    display: inline;
+}
+img , picture , video , iframe , svg {
+    display: block;
+    width: 100%;
+    height: initial;
+}
+svg{
+    fill: currentColor;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    font-size: 100%;
+
+    --c-secondary-hover: #808080;
+    --c-primary-btn: #68B631;
+    --c-bg-btn: #ededed;
+}
+body{
+    font-size: 90%;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .125rem;
+    color: #1d1d1d;
+}
+.Header{
+    width: 100%;
+    padding: 2.6em 8rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header-img{
+    font-size: 250%;
+}
+.Header-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 4rem;
+}
+.Header-svg{
+    width: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+.Header-a:hover{
+    transition: color .5s;
+}
+.Header-a:hover{
+    color: var(--c-secondary-hover);
+}
+.Main{
+    margin: 0 0 9.5rem;
+}
+.Inside{
+    width: 100%;
+    margin: 0 0 7.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.Inside-img{
+    position: static;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.Inside-h1{
+    width: 60%;
+    position: absolute;
+}
+.Columns{
+    max-width: 162.5rem;
+    margin: 0 auto 9rem;
+    padding: 0 9rem;
+
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 2.2rem;
+}
+.Columns-h2{
+    padding: 2.3rem 0;
+    text-align: center;
+}
+.Footer{
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto 2rem;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    font-weight: 300;
+}
+.Social{
+    margin: 0 0 3.125rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .9375rem;
+    transition: color .2s;
+}
+.Social:hover{
+    color: var(--c-secondary-hover);
+}   
+.Social-li{
+    width: 1.4rem;
+    height: 1.4rem;
+    transition: color .5s;
+}
+.Social-li:hover{
+    color: #000;
+}
+.Policies{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
+    letter-spacing: .1875rem;
+}
+.Policies-li{
+    padding: 0 .7rem;
+    margin: .3rem 0;
+
+    transition: color .5s ease;
+}
+.Policies-li:hover{
+    color: var(--c-secondary-hover);
+}
+.Policies-li::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: .0625rem;
+    background-color: #1d1d1d;
+    transition: background-color .5s ease;
+}
+.Policies-li:hover::after{
+    background-color: var(--c-secondary-hover);
+}
+.Policies--before{
+    border-left: .0625rem solid var(--c-secondary-hover);
+}
+.Copy{
+    margin: 1rem 0 3rem;
+    letter-spacing: .1875rem;
+}
+.Footer-btn{
+    background-color: var(--c-bg-btn);
+    padding: 1rem 2.5rem;
+    border: .0625rem solid var(--c-primary-btn);
+    cursor: pointer;
+
+    font-family: "Nunito", sans-serif;
+    text-transform: initial;
+    letter-spacing: initial;
+    text-align: center;
+    color: var(--c-primary-btn);
+    font-weight: 400;
+    font-size: 1rem;
+    transition: background-color .5s ease , color .5s ease;
+}
+.Footer-btn:hover{
+    background-color: var(--c-primary-btn);
+    color: #fff;
+}
+@media (max-width:1230px){
+    .Header{
+        padding: 1rem 2rem;
+        font-size: 80%;
+        position: relative;
+    }
+    .Header-nav{
+        display: none;
+        width: 90%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: white;
+        height: 100vh;
+        animation: left-to-right .5s ease;
+    }
+    .Header-nav.isActive{
+        display: block ;
+    }
+    .Header-ul{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3rem 2.5rem;
+        text-transform: initial;
+        font-size: 1.25rem;
+        letter-spacing: 1.4;
+        font-weight: 400;
+    }
+    .Header-a::after{
+        content: '\00BB';
+        color: rgba(0, 0, 0, 0.4);
+        margin: 0 .2rem
+    }
+    .Header-svg{
+        display: block;
+    }
+    .Svg-path:nth-child(1){
+        display: none;
+    }
+    .Svg-path:nth-child(2){
+        display: none;
+    }
+    .Svg-path:nth-child(1).isActive{
+        display: block;
+    }
+    .Svg-path:nth-child(2).isActive{
+        display: block;
+    }
+}
+@media (max-width:1000px){
+    .Inside{
+        margin: 0 0 5rem;
+    }
+    .Columns{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:700px){
+    .Inside{
+        margin: 0 0 5rem;
+    }
+    .Columns{
+        padding: 0 3rem;
+        margin: 0 0 4rem;
+        grid-template-columns: 1fr;
+    }
+    .Policies{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: .8rem;
+    }
+    .Policies-li{
+        border: none;
+        text-align: center;
+    }
+}
+@keyframes left-to-right{
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
